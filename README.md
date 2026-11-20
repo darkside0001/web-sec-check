@@ -74,7 +74,7 @@ pip install .
 python3 -m web_sec_check example.com
 ```
 
-Requires Python 3.9+.
+Requires Python 3.10+.
 
 ## Usage
 
