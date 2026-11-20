@@ -1,0 +1,37 @@
+web-sec-check  https://localhost:8443/
+Grade: F   Score: 56/100   HTTP status: 200
+
+== TLS ==
+[PASS] TLS 1.0 and 1.1 refused
+[PASS] TLS 1.3 supported
+[PASS] Strong cipher negotiated: TLS_AES_256_GCM_SHA384 (TLSv1.3, 256 bit)
+
+== Certificate ==
+[FAIL] Certificate is not trusted: unable to get local issuer certificate
+       fix: Use a certificate from a public CA (Let's Encrypt is free) and serve the full chain.
+[INFO] Certificate details: subject CN=localhost, issuer=Test CA, SAN=localhost
+[PASS] Certificate not near expiry: expires 2027-01-19 (59 days)
+
+== Headers ==
+[WARN] HSTS max-age too short: max-age=3600 (minimum 15552000)
+       fix: Strict-Transport-Security: max-age=31536000; includeSubDomains
+[WARN] CSP allows unsafe sources: 'unsafe-inline', 'unsafe-eval'
+       fix: Replace inline scripts with nonces or hashes.
+[FAIL] X-Content-Type-Options missing
+       fix: X-Content-Type-Options: nosniff
+[FAIL] No clickjacking protection
+       fix: X-Frame-Options: DENY or CSP frame-ancestors 'self'
+[WARN] Referrer-Policy missing or weak
+       fix: Referrer-Policy: strict-origin-when-cross-origin
+[WARN] Permissions-Policy missing
+       fix: Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+== Disclosure ==
+[WARN] Server version disclosed: nginx/1.18.0 (Ubuntu)
+       fix: Hide the version: nginx 'server_tokens off;', Apache 'ServerTokens Prod'.
+[WARN] X-Powered-By header disclosed: PHP/7.4.3
+       fix: Remove the X-Powered-By header.
+
+== Cookies ==
+[WARN] Cookie 'PHPSESSID' missing flags: Secure, HttpOnly, SameSite
+       fix: Set-Cookie: PHPSESSID=...; Secure; HttpOnly; SameSite=Lax

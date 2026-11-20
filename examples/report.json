@@ -1,0 +1,303 @@
+[
+  {
+    "target": "https://localhost:8443/",
+    "error": null,
+    "grade": "F",
+    "score": 56,
+    "status": 200,
+    "final_url": "https://localhost:8443/",
+    "findings": [
+      {
+        "id": "TLS-LEGACY",
+        "category": "TLS",
+        "status": "PASS",
+        "severity": "high",
+        "title": "TLS 1.0 and 1.1 refused",
+        "detail": "",
+        "fix": ""
+      },
+      {
+        "id": "TLS-13",
+        "category": "TLS",
+        "status": "PASS",
+        "severity": "low",
+        "title": "TLS 1.3 supported",
+        "detail": "",
+        "fix": ""
+      },
+      {
+        "id": "TLS-CIPHER",
+        "category": "TLS",
+        "status": "PASS",
+        "severity": "medium",
+        "title": "Strong cipher negotiated",
+        "detail": "TLS_AES_256_GCM_SHA384 (TLSv1.3, 256 bit)",
+        "fix": ""
+      },
+      {
+        "id": "CERT-VALID",
+        "category": "Certificate",
+        "status": "FAIL",
+        "severity": "high",
+        "title": "Certificate is not trusted",
+        "detail": "unable to get local issuer certificate",
+        "fix": "Use a certificate from a public CA (Let's Encrypt is free) and serve the full chain."
+      },
+      {
+        "id": "CERT-INFO",
+        "category": "Certificate",
+        "status": "INFO",
+        "severity": "info",
+        "title": "Certificate details",
+        "detail": "subject CN=localhost, issuer=Test CA, SAN=localhost",
+        "fix": ""
+      },
+      {
+        "id": "CERT-EXPIRY",
+        "category": "Certificate",
+        "status": "PASS",
+        "severity": "high",
+        "title": "Certificate not near expiry",
+        "detail": "expires 2027-01-19 (59 days)",
+        "fix": ""
+      },
+      {
+        "id": "HDR-HSTS",
+        "category": "Headers",
+        "status": "WARN",
+        "severity": "high",
+        "title": "HSTS max-age too short",
+        "detail": "max-age=3600 (minimum 15552000)",
+        "fix": "Strict-Transport-Security: max-age=31536000; includeSubDomains"
+      },
+      {
+        "id": "HDR-CSP",
+        "category": "Headers",
+        "status": "WARN",
+        "severity": "medium",
+        "title": "CSP allows unsafe sources",
+        "detail": "'unsafe-inline', 'unsafe-eval'",
+        "fix": "Replace inline scripts with nonces or hashes."
+      },
+      {
+        "id": "HDR-XCTO",
+        "category": "Headers",
+        "status": "FAIL",
+        "severity": "medium",
+        "title": "X-Content-Type-Options missing",
+        "detail": "",
+        "fix": "X-Content-Type-Options: nosniff"
+      },
+      {
+        "id": "HDR-FRAME",
+        "category": "Headers",
+        "status": "FAIL",
+        "severity": "medium",
+        "title": "No clickjacking protection",
+        "detail": "",
+        "fix": "X-Frame-Options: DENY or CSP frame-ancestors 'self'"
+      },
+      {
+        "id": "HDR-REF",
+        "category": "Headers",
+        "status": "WARN",
+        "severity": "low",
+        "title": "Referrer-Policy missing or weak",
+        "detail": "",
+        "fix": "Referrer-Policy: strict-origin-when-cross-origin"
+      },
+      {
+        "id": "HDR-PERM",
+        "category": "Headers",
+        "status": "WARN",
+        "severity": "low",
+        "title": "Permissions-Policy missing",
+        "detail": "",
+        "fix": "Permissions-Policy: camera=(), microphone=(), geolocation=()"
+      },
+      {
+        "id": "INFO-SERVER",
+        "category": "Disclosure",
+        "status": "WARN",
+        "severity": "low",
+        "title": "Server version disclosed",
+        "detail": "nginx/1.18.0 (Ubuntu)",
+        "fix": "Hide the version: nginx 'server_tokens off;', Apache 'ServerTokens Prod'."
+      },
+      {
+        "id": "INFO-X-POWERED-BY",
+        "category": "Disclosure",
+        "status": "WARN",
+        "severity": "low",
+        "title": "X-Powered-By header disclosed",
+        "detail": "PHP/7.4.3",
+        "fix": "Remove the X-Powered-By header."
+      },
+      {
+        "id": "COOKIE-PHPSESSID",
+        "category": "Cookies",
+        "status": "WARN",
+        "severity": "medium",
+        "title": "Cookie 'PHPSESSID' missing flags",
+        "detail": "Secure, HttpOnly, SameSite",
+        "fix": "Set-Cookie: PHPSESSID=...; Secure; HttpOnly; SameSite=Lax"
+      }
+    ],
+    "headers": {
+      "Server": "nginx/1.18.0 (Ubuntu)",
+      "Date": "Fri, 20 Nov 2026 06:04:14 GMT",
+      "X-Powered-By": "PHP/7.4.3",
+      "Strict-Transport-Security": "max-age=3600",
+      "Content-Security-Policy": "default-src 'self' 'unsafe-inline' 'unsafe-eval'",
+      "Set-Cookie": "PHPSESSID=8f2c1; path=/",
+      "Content-Length": "2"
+    }
+  },
+  {
+    "target": "https://localhost:9443/",
+    "error": null,
+    "grade": "A+",
+    "score": 99,
+    "status": 200,
+    "final_url": "https://localhost:9443/",
+    "findings": [
+      {
+        "id": "TLS-LEGACY",
+        "category": "TLS",
+        "status": "PASS",
+        "severity": "high",
+        "title": "TLS 1.0 and 1.1 refused",
+        "detail": "",
+        "fix": ""
+      },
+      {
+        "id": "TLS-13",
+        "category": "TLS",
+        "status": "PASS",
+        "severity": "low",
+        "title": "TLS 1.3 supported",
+        "detail": "",
+        "fix": ""
+      },
+      {
+        "id": "TLS-CIPHER",
+        "category": "TLS",
+        "status": "PASS",
+        "severity": "medium",
+        "title": "Strong cipher negotiated",
+        "detail": "TLS_AES_256_GCM_SHA384 (TLSv1.3, 256 bit)",
+        "fix": ""
+      },
+      {
+        "id": "CERT-VALID",
+        "category": "Certificate",
+        "status": "PASS",
+        "severity": "high",
+        "title": "Certificate chain and hostname valid",
+        "detail": "",
+        "fix": ""
+      },
+      {
+        "id": "CERT-INFO",
+        "category": "Certificate",
+        "status": "INFO",
+        "severity": "info",
+        "title": "Certificate details",
+        "detail": "subject CN=localhost, issuer=Test CA, SAN=localhost",
+        "fix": ""
+      },
+      {
+        "id": "CERT-EXPIRY",
+        "category": "Certificate",
+        "status": "PASS",
+        "severity": "high",
+        "title": "Certificate not near expiry",
+        "detail": "expires 2027-01-19 (59 days)",
+        "fix": ""
+      },
+      {
+        "id": "HDR-HSTS",
+        "category": "Headers",
+        "status": "PASS",
+        "severity": "high",
+        "title": "HSTS enabled",
+        "detail": "max-age=31536000; includeSubDomains",
+        "fix": ""
+      },
+      {
+        "id": "HDR-CSP",
+        "category": "Headers",
+        "status": "PASS",
+        "severity": "medium",
+        "title": "Content-Security-Policy set",
+        "detail": "default-src 'self'; frame-ancestors 'none'",
+        "fix": ""
+      },
+      {
+        "id": "HDR-XCTO",
+        "category": "Headers",
+        "status": "PASS",
+        "severity": "medium",
+        "title": "X-Content-Type-Options: nosniff",
+        "detail": "",
+        "fix": ""
+      },
+      {
+        "id": "HDR-FRAME",
+        "category": "Headers",
+        "status": "PASS",
+        "severity": "medium",
+        "title": "Clickjacking protection (CSP frame-ancestors)",
+        "detail": "",
+        "fix": ""
+      },
+      {
+        "id": "HDR-REF",
+        "category": "Headers",
+        "status": "PASS",
+        "severity": "low",
+        "title": "Referrer-Policy set",
+        "detail": "strict-origin-when-cross-origin",
+        "fix": ""
+      },
+      {
+        "id": "HDR-PERM",
+        "category": "Headers",
+        "status": "PASS",
+        "severity": "low",
+        "title": "Permissions-Policy set",
+        "detail": "camera=(), microphone=()",
+        "fix": ""
+      },
+      {
+        "id": "INFO-SERVER",
+        "category": "Disclosure",
+        "status": "WARN",
+        "severity": "low",
+        "title": "Server version disclosed",
+        "detail": "BaseHTTP/0.6 Python/3.13.18",
+        "fix": "Hide the version: nginx 'server_tokens off;', Apache 'ServerTokens Prod'."
+      },
+      {
+        "id": "COOKIE-sid",
+        "category": "Cookies",
+        "status": "PASS",
+        "severity": "low",
+        "title": "Cookie 'sid' has secure flags",
+        "detail": "",
+        "fix": ""
+      }
+    ],
+    "headers": {
+      "Server": "BaseHTTP/0.6 Python/3.13.18",
+      "Date": "Fri, 20 Nov 2026 06:04:14 GMT",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "Content-Security-Policy": "default-src 'self'; frame-ancestors 'none'",
+      "X-Content-Type-Options": "nosniff",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Permissions-Policy": "camera=(), microphone=()",
+      "Set-Cookie": "sid=1; Secure; HttpOnly; SameSite=Strict",
+      "Content-Length": "2"
+    }
+  }
+]

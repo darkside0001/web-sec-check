@@ -1,0 +1,27 @@
+web-sec-check  https://localhost:9443/
+Grade: A+   Score: 99/100   HTTP status: 200
+
+== TLS ==
+[PASS] TLS 1.0 and 1.1 refused
+[PASS] TLS 1.3 supported
+[PASS] Strong cipher negotiated: TLS_AES_256_GCM_SHA384 (TLSv1.3, 256 bit)
+
+== Certificate ==
+[PASS] Certificate chain and hostname valid
+[INFO] Certificate details: subject CN=localhost, issuer=Test CA, SAN=localhost
+[PASS] Certificate not near expiry: expires 2027-01-19 (59 days)
+
+== Headers ==
+[PASS] HSTS enabled: max-age=31536000; includeSubDomains
+[PASS] Content-Security-Policy set: default-src 'self'; frame-ancestors 'none'
+[PASS] X-Content-Type-Options: nosniff
+[PASS] Clickjacking protection (CSP frame-ancestors)
+[PASS] Referrer-Policy set: strict-origin-when-cross-origin
+[PASS] Permissions-Policy set: camera=(), microphone=()
+
+== Disclosure ==
+[WARN] Server version disclosed: BaseHTTP/0.6 Python/3.13.18
+       fix: Hide the version: nginx 'server_tokens off;', Apache 'ServerTokens Prod'.
+
+== Cookies ==
+[PASS] Cookie 'sid' has secure flags
